@@ -2,10 +2,38 @@ body{
     font-family: Helvetica, sans-serif;
     color: #D4D7DB;
     background-color: #212429;
+    position: relative;
 }
+.body-background{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+.body-background::before, .body-background::after{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.body-background::before{
+    background: #ff54c4;
+    left: 60%;
+    top: 30%;
+}
+.body-background::after{
+    background: #76c9fd;
+    left: 40%;
+    top: 50%;
+}
+
 .container{
     padding: 50px;
     position: relative;
+    z-index: 1;
 }
 h1{
     text-align: center;
