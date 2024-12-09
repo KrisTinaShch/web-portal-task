@@ -12,23 +12,7 @@ body{
     height: 100%;
     z-index: 0;
 }
-.body-background::before, .body-background::after{
-    content: '';
-    position: absolute;
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-}
-.body-background::before{
-    background: #ff54c4;
-    left: 60%;
-    top: 30%;
-}
-.body-background::after{
-    background: #76c9fd;
-    left: 40%;
-    top: 50%;
-}
+
 
 .container{
     padding: 50px;
@@ -56,6 +40,7 @@ h1{
     background-color: #353442;
     color: #fff;
     transition: all 0.3s ease;
+    margin-bottom: 30px;
 }
 
 .search-bar input:focus {
@@ -71,30 +56,58 @@ h1{
     color: transparent; 
 }
 
-.task-table{
+.task-table {
     width: 100%;
-    margin-top: 30px;
-    border-spacing: 0 20px;
-    border-collapse: separate;
-}
-.task-table__body{
-    text-align: center;
-}
-.task-table__row{
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(100px);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-}
-.task-table__cell{
-    padding: 50px 15px;
-    color: #a9a9a9;
-}
-.task-table__header{
-    padding: 25px 15px;
-    font-size: 20px;
-    font-weight: bold;
+    border-spacing: 0;
+    border-collapse: collapse;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    overflow: hidden;
 
 }
+
+.task-table__head {
+    background: rgba(255, 255, 255, 0.15);
+    text-align: left;
+}
+
+.task-table__header {
+    padding: 15px;
+    font-size: 16px;
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    vertical-align: middle;
+}
+
+.task-table__body {
+    text-align: left;
+}
+
+.task-table__row {
+    transition: all 0.5s ease;
+}
+
+.task-table__row:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: scale(1.01);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.task-table__cell {
+    padding: 15px;
+    font-size: 14px;
+    color: #D4D7DB;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.task-table__cell--color-code {
+    font-weight: bold;
+    text-align: center;
+    border-left: 2px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
 
 
