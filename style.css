@@ -110,4 +110,53 @@ h1{
 }
 
 
+@media (max-width: 768px) {
+    .search-bar {
+        max-width: 100%;
+        float: none;
+    }
+
+    .task-table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+    }
+
+    .task-table__head {
+        display: none;
+    }
+
+    .task-table__row {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 15px;
+        padding: 10px;
+        border-radius: 8px;
+        background: rgba(255, 255, 255, 0.05);
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .task-table__cell {
+        display: flex;
+        justify-content: space-between;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .task-table__cell:last-child {
+        border-bottom: none;
+    }
+
+    .task-table__cell--color-code {
+        text-align: left;
+    }
+
+    .task-table__cell::before {
+        content: attr(data-label);
+        font-weight: bold;
+        color: #fff;
+        margin-right: 10px;
+    }
+}
+
 
