@@ -14,10 +14,14 @@
         <h1 class="header__title">Task Manager</h1>
     </header>
     <main class="main">
-        <div class="search-bar">
-            <input type="text" id="searchInput" class="search-bar__input" placeholder="Search tasks...">
+        <div class="menu">
+            <div class="search-bar">
+                <input type="text" id="searchInput" class="search-bar__input" placeholder="Search tasks...">
+            </div>
+            <div>
+                <button id="openModal" class="modal-btn">Open Modal</button>
+            </div>
         </div>
-
         <table id="taskTable" class="task-table">
             <thead class="task-table__head">
             <tr class="task-table__row">
@@ -32,6 +36,15 @@
         </table>
     </main>
 </div>
+<div id="imageModal" class="modal hidden">
+    <div class="modal-content">
+        <span id="closeModal" class="close">&times;</span>
+        <h2>Select an Image</h2>
+        <input type="file" id="imageInput" accept="image/*">
+        <div id="imagePreview"></div>
+    </div>
+</div>
+
 <script src="app.js"></script>
 </body>
 </html>
